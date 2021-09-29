@@ -33,7 +33,7 @@ jobs:
           npm install -g jsdoc
 
           # Run JSDoc
-          jsdoc force-app/main/default/lwc/*/*.js
+          jsdoc force-app/main/default/lwc/component/component.js
       
       # Upload Documents if the previous job was successful
       - name: Uploding LWC Documentation
@@ -43,9 +43,12 @@ jobs:
           name: LWC Docs
           path: out/*
           
+      - name: Print Working Directory
+        run: ls -al out/
+          
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
-          path: out/
+          path: "out/"
         env:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
