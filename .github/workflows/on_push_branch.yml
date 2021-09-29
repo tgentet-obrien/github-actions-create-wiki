@@ -31,9 +31,10 @@ jobs:
         run: |
           # Install JSDoc
           npm install -g jsdoc
+          npm install -g jsdoc-to-markdown
 
           # Run JSDoc
-          jsdoc force-app/main/default/lwc/component/component.js
+          jsdoc2md force-app/main/default/lwc/component/component.js
       
       # Upload Documents if the previous job was successful
       - name: Uploding LWC Documentation
@@ -42,6 +43,9 @@ jobs:
         with:
           name: LWC Docs
           path: out/*
+          
+      - name: Print Working Directory
+        run: ls -al out/
           
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
