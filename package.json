@@ -34,6 +34,7 @@
     "prettier-plugin-apex": "^1.10.0"
   },
   "dependencies": {
-    "@cparra/apexdocs": "^1.12.2"
+    "@cparra/apexdocs": "^1.12.2",
+    "jsdoc": "^3.6.7"
   }
 }
