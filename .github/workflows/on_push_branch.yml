@@ -33,7 +33,7 @@ jobs:
           npm install -g jsdoc
 
           # Run JSDoc
-          jsdoc force-app/main/default/lwc/*/*.js
+          jsdoc force-app/main/default/lwc/component/component.js
       
       # Upload Documents if the previous job was successful
       - name: Uploding LWC Documentation
