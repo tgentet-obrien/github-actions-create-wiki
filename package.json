@@ -13,7 +13,8 @@
     "test:unit:coverage": "sfdx-lwc-jest --coverage",
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
-    "doc": "apexdocs-generate -s core-utils-package/main/default/classes/ -p global namespaceaccessible public private"
+    "doc": "apexdocs-generate -s force-app/main/default/classes/ -p global namespaceaccessible public private",
+    "doc-lwc": "jsdoc force-app/main/default/lwc/*/*.js"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.4",
